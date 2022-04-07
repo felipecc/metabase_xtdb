@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  metabase: 
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: metabase_xtdb:latest
+    container_name: metabase_xtdb
+    ports:
+      - 3000:3000
+    restart: always
